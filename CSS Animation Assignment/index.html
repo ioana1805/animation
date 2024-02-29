@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+body{
+background-color: #050210;
+height: 100%;
+
+}
+.circle {
+  background-image:radial-gradient( #fb5dad, #55fb9f, #b97aff);
+  padding:1px;
+  width:300px;
+  height:300px;
+  border-style: solid;
+  border-color:transparent;
+  border-radius: 50%;
+  border-width:20px;
+  animation: animation 1s linear infinite; 
+  margin-top: 80px;
+  margin-left: 450px;
+  filter: brightness(5px);
+  position:fixed;
+}
+.circle2{
+  position: fixed;
+  background: rgb(5, 2, 16);
+  height: 299px;
+  width: 299px;
+  border-style: solid;
+  border-color:transparent;
+  border-radius: 50%;
+  border-width:1px;
+  animation-name:boom-animation;
+  animation-duration:1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out /*cubic-bezier(0.5, 0.4, 0.3, -0.10)*/;
+
+}
+  
+@keyframes animation{
+            0%{
+                box-shadow: 0px 0px 70px 20px #fb5dad; 
+                transform: rotate(0deg);
+            }
+            50%{
+                box-shadow: 0px 0px 70px 20px #55fb9f; 
+                transform: rotate(180deg);
+            }
+            100%{
+                box-shadow: 0px 0px 70px 20px #b97aff; 
+                transform: rotate(360deg); 
+            }
+            }
+     
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="circle2">
+
+        </div>
+    </div>
+</body>
+</html>
